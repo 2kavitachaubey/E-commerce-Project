@@ -1,0 +1,143 @@
+.header-howitworks {
+  background: #fff4f1;
+}
+.header-howitworks .wellbeing-content {
+  margin-left: 30px;
+}
+.header-howitworks .wellbeing-img {
+  margin-right: 30px;
+}
+
+/* Steps for How It Works */
+.steps-howitworks {
+  padding: 90px;
+}
+.steps-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ebeef5;
+  border-radius: 10px;
+  margin: 30px;
+  gap : 40px;
+  padding: 40px;
+}
+.steps-wrapper.pink-color {
+  background-color: #fff4f1;
+}
+
+.step-icon {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.step-icon img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 400px;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+.step-box {
+  padding: 0 50px;
+  flex: 1;
+}
+
+.step-box span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #254b45;
+  color: #fff;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  font-size: 14px;
+  line-height: 1;
+}
+.step-box h1 {
+  line-height: 40px;
+  padding: 20px 0;
+}
+
+.step-box p{
+  padding-bottom: 20px;
+}
+
+
+/* Product page */
+.product-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 70px;
+  flex-wrap: wrap; /* keeps it responsive */
+}
+
+.product-header .hero-content {
+  flex: 1;
+  max-width: 40%;
+}
+
+.product-header .heroImage {
+  flex: 1;
+}
+
+.product-header .heroImage img {
+  width: 100%;
+  max-width: 875px;
+  height: auto;
+  display: block;
+}
+
+/* Product section */
+
+.product-section{
+  padding: 100px;
+}
+
+.product-section-heading{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 50px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.product-section-heading span{
+  font-weight: 300;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.search-product{
+  padding: 10px 10px;  
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  flex-shrink: 0;
+}
+
+.product-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(320px,1fr));
+  gap: 30px;
+}
+
+.product-card{
+  width: 100%;
+}
+
+.product-img{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #F9F7F6;
+  padding: 40px 30px;
+  border-radius: 20px;
+}
+.product-description{
+  padding: 20px;
+}
