@@ -3,11 +3,18 @@ import Link from "next/link";
 import HeroProduct from "@/components/HeroProduct";
 import Products from "@/components/Products";
 
-const howItWorks = () => {
-  return <div>
-    <HeroProduct/>
-    <Products/>
-  </div>;
+const ProductsPage = ({cart, handleCart, handleIncrement, handleDecrement }) => {
+  return (
+    <div>
+      <HeroProduct />
+      <Products
+        cart={cart}
+        handleCart={handleCart}
+        handleIncrement={handleIncrement}
+        handleDecrement={handleDecrement}
+      />
+    </div>
+  );
 };
 
-export default howItWorks;
+export default ProductsPage;

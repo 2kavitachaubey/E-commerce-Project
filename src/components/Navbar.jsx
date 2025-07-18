@@ -1,9 +1,10 @@
 import React from "react";
-import  Link  from "next/link";
+import Link from "next/link";
 import "../pages.css";
 
-const Navbar = () => {
+const Navbar = ({cart}) => {
   // console.log('props navbar', props.cart)
+  const cartLength = cart.reduce((acc,item)=>acc+item.quantity,0);
   return (
     <nav>
       <Link href="/">
@@ -26,7 +27,20 @@ const Navbar = () => {
           <Link href="/products">Product</Link>
         </li>
       </ul>
-      <Link href="/Eligibility"><button className="eligibility-button">Check Eligibility</button></Link>
+      <div className="nav-btn">
+        <Link href="/cartPage">
+        <div>
+          <button className="addToCart-btn">
+            <img src="./images/wrap.svg" alt="addToCart" />
+            <span className={cartLength>0? "itemNumber" : ""}>{cartLength > 0? cartLength: ""}</span>
+          </button>
+        </div>
+
+        </Link>
+        <Link href="/Eligibility">
+          <button className="eligibility-button">Check Eligibility</button>
+        </Link>
+      </div>
     </nav>
   );
 };

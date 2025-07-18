@@ -1,6 +1,6 @@
 body {
   color: #254b45;
-  font-family: Georgia, serif;
+  /* font-family: Georgia, serif; */
   line-height: 2;
 }
 
@@ -43,9 +43,46 @@ nav {
   font-weight: 600;
   margin: 0 15px;
   color: #254b45;
+  cursor: pointer;
 }
 .nav-links li a:hover {
   color: #417a72;
+}
+.nav-btn{
+  display: flex;
+  align-items: center;
+}
+
+.addToCart-btn{
+  position: relative;
+  margin-right:20px;
+  border-radius: 12px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.addToCart-btn .itemNumber{
+  position: absolute;
+  top: -6px;
+  right: -10px;
+  background-color: #ffb93a;
+   width: 28px; 
+  height: 28px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 800;
+  color: #254B45;
+  border-radius: 50%;
+}
+
+.addToCart-btn img{
+  display: block;
+}
+
+.addToCart-btn:hover{
+  box-shadow: 0 0 2px rgba(30, 209, 176, 0.263);
 }
 
 /* Main section */
