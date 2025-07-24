@@ -4,8 +4,10 @@ import { useRouter } from "next/router";
 import { product } from "@/constant";
 import Link from "next/link";
 import AddToCart from "./AddToCart";
+import { useCart } from "@/pages/cartContext";
 
-const Products = ({ cart, handleCart, handleIncrement, handleDecrement }) => {
+const Products = () => {
+  const { cart, handleCart, handleIncrement, handleDecrement } = useCart();
   const pageSize = 9;
   const totalPages = Math.ceil(product.length / pageSize);
   console.log(totalPages);

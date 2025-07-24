@@ -1,8 +1,10 @@
 import React, { useState } from "react";
-import Link from "next/link";
 import AddToCart from "./AddToCart";
+import { useCart } from "@/pages/cartContext";
 
-const Cart = ({ cart, handleCart, handleIncrement, handleDecrement, handleDeleteItem }) => {
+const Cart = () => {
+  const {cart, handleCart, handleIncrement, handleDecrement, handleDeleteItem} = useCart();
+
   console.log("this is my cart", cart);
   
   const getQuantity = (id) => {

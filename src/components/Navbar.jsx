@@ -1,9 +1,11 @@
 import React from "react";
 import Link from "next/link";
 import "../pages.css";
+import { useCart } from "@/pages/cartContext";
 
-const Navbar = ({cart}) => {
+const Navbar = () => {
   // console.log('props navbar', props.cart)
+  const {cart} = useCart();
   const cartLength = cart.reduce((acc,item)=>acc+item.quantity,0);
   return (
     <nav>

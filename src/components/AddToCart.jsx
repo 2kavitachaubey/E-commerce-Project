@@ -1,12 +1,8 @@
+import { useCart } from "@/pages/cartContext";
 import React from "react";
 
-const AddToCart = ({
-  qty,
-  value,
-  handleCart,
-  handleIncrement,
-  handleDecrement,
-}) => {
+const AddToCart = ({ qty, value }) => {
+  const { handleCart, handleDecrement, handleIncrement } = useCart();
   return (
     <div>
       <div className="cart-btn">

@@ -2,7 +2,10 @@ import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import { product } from "@/constant";
 import AddToCart from "@/components/AddToCart";
-const Product = ({ cart, handleCart, handleIncrement, handleDecrement }) => {
+import { useCart } from "../cartContext";
+const Product = () => {
+  const { cart, handleCart, handleIncrement, handleDecrement } = useCart();
+
   console.log(product);
   const router = useRouter();
 

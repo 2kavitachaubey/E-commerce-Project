@@ -3,7 +3,7 @@ import { useState } from "react";
 import "../pages.css";
 import Link from "next/link";
 
-const question = () => {
+const Question = () => {
   const [direction, setDirection] = useState(null);
   const handleArrawClick = (index) => {
     setDirection(direction === index ? null : index);
@@ -62,4 +62,4 @@ const question = () => {
   );
 };
 
-export default question;
+export default Question;
