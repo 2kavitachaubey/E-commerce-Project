@@ -48,40 +48,40 @@ nav {
 .nav-links li a:hover {
   color: #417a72;
 }
-.nav-btn{
+.nav-btn {
   display: flex;
   align-items: center;
 }
 
-.addToCart-btn{
+.addToCart-btn {
   position: relative;
-  margin-right:20px;
+  margin-right: 20px;
   border-radius: 12px;
   background-color: transparent;
   border: none;
   cursor: pointer;
 }
-.addToCart-btn .itemNumber{
+.addToCart-btn .itemNumber {
   position: absolute;
   top: -6px;
   right: -10px;
   background-color: #ffb93a;
-   width: 28px; 
-  height: 28px; 
+  width: 28px;
+  height: 28px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 12px;
   font-weight: 800;
-  color: #254B45;
+  color: #254b45;
   border-radius: 50%;
 }
 
-.addToCart-btn img{
+.addToCart-btn img {
   display: block;
 }
 
-.addToCart-btn:hover{
+.addToCart-btn:hover {
   box-shadow: 0 0 2px rgba(30, 209, 176, 0.263);
 }
 
@@ -89,17 +89,15 @@ nav {
 .hero-section {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 20px 70px 0 70px;
+  align-items: flex-end;
+  padding: 0 120px;
   margin-bottom: 10px;
   background: #dae7d8;
 }
 
 .hero-content {
-  position: relative;
   flex: 1;
-  padding: 0 40px;
-  /* max-width: 550px; */
+  padding: 100px 0;
 }
 
 .content {
@@ -139,21 +137,22 @@ nav {
   gap: 12px;
 }
 
-/* Hero image block*/
 .heroImage {
-  /* flex: 1; */
-  padding-top: 30px;
-  height: 100%;
-  /* text-align: center; */
+  flex: 1;
+  display: flex;
+  justify-content: center; 
+  align-items: center;
 }
 
 .heroImage img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  width: 45vw;
+  max-height: 800px;
+  height: auto;
+  object-fit: contain;
   display: block;
 }
 
+/* ............... */
 .feature-detail-row {
   background-color: #254b45;
   color: white;
@@ -173,7 +172,9 @@ nav {
   padding-right: 8px;
 }
 
-/* Steps Styling */
+
+
+/* Steps Styling ..........*/
 .steps-details {
   margin: 80px 50px;
   padding: 50px 20px;
@@ -409,28 +410,26 @@ nav {
   height: auto;
 }
 
-
-
 /* arrow */
-.query-container{
-  width: 800px;      
-  margin: 80px auto;  
-  padding: 20px 40px;   
+.query-container {
+  width: 800px;
+  margin: 80px auto;
+  padding: 20px 40px;
   text-align: center;
   box-sizing: border-box;
 }
 
-.query-container h1{
+.query-container h1 {
   padding-bottom: 10px;
 }
 
 .query-item {
   text-align: left;
   padding: 25px 0;
-  border-bottom: 1px solid #254B45; 
+  border-bottom: 1px solid #254b45;
 }
 
-.query-question-row{
+.query-question-row {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -442,20 +441,20 @@ nav {
   flex: 1;
 }
 
-.query-ans-wrapper{
+.query-ans-wrapper {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease-in-out;
 }
 
-.query-ans-wrapper.show{
+.query-ans-wrapper.show {
   max-height: 100px;
 }
 
 .query-ans {
   margin-top: 10px;
   padding-right: 15px;
-  color: #254B45;
+  color: #254b45;
   line-height: 1.5;
 }
 
@@ -464,7 +463,7 @@ nav {
   width: 28px;
   height: 28px;
   border-radius: 50%;
-  background-color: #254B45;
+  background-color: #254b45;
   color: white;
   border: none;
   cursor: pointer;
@@ -477,30 +476,26 @@ nav {
   border-bottom: none;
 }
 
-
-
-.query-footer{
+.query-footer {
   font-size: 14px;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 70px;
 }
-.query-footer p{
+.query-footer p {
   padding-right: 10px;
-  color: #434E4C;
+  color: #434e4c;
 }
-
-
 
 /* Footer */
 
 /* Main container */
 .footer-container {
-  background-color: #254B45;
+  background-color: #254b45;
   color: #ffffff;
   padding: 60px 100px;
-  margin: 0 10px ;
+  margin: 0 10px;
   border-radius: 15px;
   display: flex;
   flex-direction: column;
@@ -530,7 +525,7 @@ nav {
   height: auto;
 }
 
-.social-icon a{
+.social-icon a {
   margin: 8px;
   display: inline-block;
   align-items: center;
@@ -543,7 +538,7 @@ nav {
 .social-icon a img {
   width: 15px;
   height: 15px;
-  display: block;  
+  display: block;
   /* remove unwanted space from the image */
 }
 
@@ -582,7 +577,7 @@ nav {
   font-weight: 500;
 }
 
-.footer-section li a:hover{
+.footer-section li a:hover {
   color: #e5e5e5;
 }
 
@@ -593,13 +588,13 @@ nav {
 
 /* Description and policy section */
 .footer-description {
-  padding: 40px 50px 0 50px ;
+  padding: 40px 50px 0 50px;
   border-top: 1px solid #ffffff;
 }
 
 .footer-description p {
   font-size: 14px;
-  margin-bottom:15px;
+  margin-bottom: 15px;
   line-height: 1.5;
 }
 
@@ -612,5 +607,3 @@ nav {
   gap: 8px;
   font-size: 13px;
 }
-
-
