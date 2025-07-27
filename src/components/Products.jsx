@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 import { product } from "@/constant";
 import Link from "next/link";
 import AddToCart from "./AddToCart";
-import { useCart } from "@/pages/cartContext";
+import { useCart } from "@/lib/cartContext";
 
 const Products = () => {
   const { cart, handleCart, handleIncrement, handleDecrement } = useCart();

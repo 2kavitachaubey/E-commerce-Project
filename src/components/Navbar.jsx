@@ -1,12 +1,12 @@
 import React from "react";
 import Link from "next/link";
 import "../pages.css";
-import { useCart } from "@/pages/cartContext";
+import { useCart } from "@/lib/cartContext";
 
 const Navbar = () => {
   // console.log('props navbar', props.cart)
-  const {cart} = useCart();
-  const cartLength = cart.reduce((acc,item)=>acc+item.quantity,0);
+  const { cart } = useCart();
+  const cartLength = cart.reduce((acc, item) => acc + item.quantity, 0);
   return (
     <nav>
       <Link href="/">
@@ -31,15 +31,19 @@ const Navbar = () => {
       </ul>
       <div className="nav-btn">
         <Link href="/cartPage">
-        <div>
-          <button className="addToCart-btn">
-            <img src="./images/wrap.svg" alt="addToCart" />
-            <span className={cartLength>0? "itemNumber" : ""}>{cartLength > 0? cartLength: ""}</span>
-          </button>
-        </div>
-
+          <div>
+            <button className="addToCart-btn">
+              <img src="./images/wrap.svg" alt="addToCart" />
+              <span className={cartLength > 0 ? "itemNumber" : ""}>
+                {cartLength > 0 ? cartLength : ""}
+              </span>
+            </button>
+          </div>
         </Link>
         <Link href="/Eligibility">
+          <button className="eligibility-button">Check Eligibility</button>
+        </Link>
+        <Link href="/">
           <button className="eligibility-button">Check Eligibility</button>
         </Link>
       </div>

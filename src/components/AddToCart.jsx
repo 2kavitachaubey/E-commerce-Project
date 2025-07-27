@@ -1,4 +1,4 @@
-import { useCart } from "@/pages/cartContext";
+import { useCart } from "@/lib/cartContext";
 import React from "react";
 
 const AddToCart = ({ qty, value }) => {

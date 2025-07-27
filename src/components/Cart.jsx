@@ -1,12 +1,20 @@
 import React, { useState } from "react";
 import AddToCart from "./AddToCart";
-import { useCart } from "@/pages/cartContext";
+import { useCart } from "@/lib/cartContext";
+
+import '../global.css';
 
 const Cart = () => {
-  const {cart, handleCart, handleIncrement, handleDecrement, handleDeleteItem} = useCart();
+  const {
+    cart,
+    handleCart,
+    handleIncrement,
+    handleDecrement,
+    handleDeleteItem,
+  } = useCart();
 
   console.log("this is my cart", cart);
-  
+
   const getQuantity = (id) => {
     const found = cart.find((item) => item.id == id);
     return found ? found.quantity : 0;
@@ -45,13 +53,18 @@ const Cart = () => {
                   <p>{value.description}</p>
                   <div className="order-btn">
                     <AddToCart
-                    qty={qty}
-                    value={value}
-                    handleCart={handleCart}
-                    handleIncrement={handleIncrement}
-                    handleDecrement={handleDecrement}
-                  />
-                  <button onClick={()=>handleDeleteItem(value)} className="order-delete-btn">Delete</button>
+                      qty={qty}
+                      value={value}
+                      handleCart={handleCart}
+                      handleIncrement={handleIncrement}
+                      handleDecrement={handleDecrement}
+                    />
+                    <button
+                      onClick={() => handleDeleteItem(value)}
+                      className="order-delete-btn"
+                    >
+                      Delete
+                    </button>
                   </div>
                 </div>
                 <div>
