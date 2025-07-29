@@ -19,7 +19,7 @@ const HeroHowItWork = () => {
           Four Simple Steps
         </h1>
         <Link href="/Eligibility">
-          <button className="eligibility-button">Check Eligibility</button>
+          <button className="yellow-btn">Check Eligibility</button>
         </Link>
         <div className="wb-customer">
           <div className="wb-image">

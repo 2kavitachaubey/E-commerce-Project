@@ -42,7 +42,7 @@ const StepsHowItWork = () => {
             <h1 className="step-heading">{value.title}</h1>
             <p>{value.description}</p>
             <Link href="/Eligibility">
-              <button className="eligibility-button">Check Eligibility</button>
+              <button className="yellow-btn">Check Eligibility</button>
             </Link>
           </div>
         </div>

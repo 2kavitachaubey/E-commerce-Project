@@ -41,10 +41,10 @@ const Navbar = () => {
           </div>
         </Link>
         <Link href="/Eligibility">
-          <button className="eligibility-button">Check Eligibility</button>
+          <button className="yellow-btn">Check Eligibility</button>
         </Link>
-        <Link href="/">
-          <button className="eligibility-button">Check Eligibility</button>
+        <Link href="/LogIn">
+          <button className="yellow-btn">Log In</button>
         </Link>
       </div>
     </nav>

@@ -26,7 +26,7 @@ const heroProduct = () => {
             </li>
           </ul>
           <Link href="/Eligibility">
-            <button className="eligibility-button">Check Eligibility</button>
+            <button className="yellow-btn">Check Eligibility</button>
           </Link>
         </div>
         <div className="heroImage">

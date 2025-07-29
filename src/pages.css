@@ -12,7 +12,7 @@ body {
   margin: 0 auto 40px;
 }
 
-.eligibility-button {
+.yellow-btn {
   background-color: #ffb93a;
   font-weight: bold;
   border: none;
@@ -22,7 +22,7 @@ body {
   color: #254b45;
 }
 
-.eligibility-button:hover {
+.yellow-btn:hover {
   box-shadow: 0 0 4px rgb(230, 205, 165);
 }
 
