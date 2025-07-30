@@ -43,7 +43,7 @@ const Navbar = () => {
         <Link href="/Eligibility">
           <button className="yellow-btn">Check Eligibility</button>
         </Link>
-        <Link href="/LogIn">
+        <Link href="/logInPage">
           <button className="yellow-btn">Log In</button>
         </Link>
       </div>
