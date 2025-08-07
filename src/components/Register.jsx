@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
-import { jsx } from "react/jsx-runtime";
 
 const Register = () => {
   const [registerDetail, setRegisterDetail] = useState({
@@ -27,7 +26,7 @@ const Register = () => {
   useEffect(() => {
     const data = localStorage.getItem("userDetails");
     if (data) {
-      setRegisterDetail(JSON.parse(data));
+      // setRegisterDetail(JSON.parse(data));
     }
   }, []);
 
