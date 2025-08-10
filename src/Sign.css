@@ -37,14 +37,11 @@
   width: 100%;
   padding: 10px;
   border: 1px solid #ccc;
+  color: #254b45;
   border-radius: 6px;
   font-size: 1rem;
   outline: none;
   transition: border-color 0.3s;
-}
-
-.form-input input[type="date"]{
-  color:#ffb93a ;
 }
 
 .form-input:focus,
@@ -52,6 +49,31 @@
 .form-textarea:focus {
   border-color: #254b4579;
 }
+
+.password-wrap {
+  position: relative;
+  width: 100%;
+}
+
+.password-input {
+  padding-right: 40px; /* space for the icon */
+}
+
+.password-toggle {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 18px;
+  color: #888;
+  user-select: none;
+}
+
+.password-toggle:hover {
+  color: #254b45; /* match your theme on hover */
+}
+
 
 /* Gender radio */
 .gender-group {
@@ -99,6 +121,6 @@
 }
 
 .form-input.not-filled::placeholder{
-    color: #ffa705;
+    color: #ff4c05;
     border-color: #ffa705;
 }

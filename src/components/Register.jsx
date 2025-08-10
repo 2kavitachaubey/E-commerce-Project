@@ -2,19 +2,10 @@ import React, { useEffect } from "react";
 import { useState } from "react";
 import { Country, State, City } from "country-state-city";
 import "../sign.css";
+import { useInfo } from "@/lib/formContext";
 
 const Register = () => {
-  const [registerDetail, setRegisterDetail] = useState({
-    name: "",
-    password: "",
-    email: "",
-    phoneNumber: "",
-    dob: "",
-    country: "",
-    state: "",
-    city: "",
-    address: "",
-  });
+  const { registerDetail, setFormValues } = useInfo();
   const [countries, setCountries] = useState([]);
   const [states, setStates] = useState([]);
   const [cities, setCities] = useState([]);
@@ -23,6 +14,7 @@ const Register = () => {
   const [selectedState, setSelectedState] = useState("");
 
   const [fillValue, setFillValue] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
 
   useEffect(() => {
     const savedData = localStorage.getItem("userDetails");
@@ -30,6 +22,10 @@ const Register = () => {
       console.log("Previously saved data:", JSON.parse(savedData));
     }
   }, []);
+
+  const handleShowPassword = () => {
+    setShowPassword(!showPassword);
+  };
 
   useEffect(() => {
     setCountries(Country.getAllCountries());
@@ -49,41 +45,20 @@ const Register = () => {
 
   const handleRegisteredDetail = (e) => {
     e.preventDefault();
-    const { name, email, phoneNumber, dob, password } = registerDetail; //name : registerDetail.name - kavita
-    if (!name || !email || !phoneNumber || !password) {
+    const { firstname, lastname, email, phoneNumber, dob, password } =
+      registerDetail; //name : registerDetail.name - kavita
+    if (!firstname || !lastname || !email || !phoneNumber || !password) {
       setFillValue(true);
+      return;
     }
-    if (name && email && phoneNumber && dob && password) {
-      localStorage.setItem("userDetails", JSON.stringify(registerDetail));
-      {
-        <body>
-          <h1>Sign up successful</h1>
-        </body>
-      }
-      setRegisterDetail({
-        name: "",
-        password: "",
-        email: "",
-        phoneNumber: "",
-        gender: "",
-        dob: "",
-        country: "",
-        state: "",
-        city: "",
-        address: "",
-      });
-      setSelectedCountry("");
-      setSelectedState("");
-    } else {
-      return <h2>Please fill all the details</h2>;
-    }
-  };
-
-  const setFormValues = (event) => {
-    setRegisterDetail({
-      ...registerDetail,
-      [event.target.name]: event.target.value,
-    });
+    localStorage.setItem("userDetails", JSON.stringify(registerDetail));
+    console.log(registerDetail);
+    // setIsAuthenticated(true);
+    // setSelectedCountry("");
+    // setSelectedState("");
+    // setCities([]);
+    // setStates([]);
+    setFillValue(false);
   };
 
   return (
@@ -94,9 +69,9 @@ const Register = () => {
           <input
             className={`form-input ${fillValue ? "not-filled" : ""}`}
             type="text"
-            name="name"
-            placeholder="Full Name *"
-            value={registerDetail.name}
+            name="firstname"
+            placeholder="First Name *"
+            value={registerDetail.firstname}
             onChange={(e) => setFormValues(e)}
           />
         </div>
@@ -104,12 +79,30 @@ const Register = () => {
         <div className="form-group">
           <input
             className={`form-input ${fillValue ? "not-filled" : ""}`}
-            type="password"
+            type="text"
+            name="lastname"
+            placeholder="Last Name *"
+            value={registerDetail.lastname}
+            onChange={(e) => setFormValues(e)}
+          />
+        </div>
+
+        <div className="form-group password-wrap">
+          <input
+            className={`form-input ${
+              fillValue ? "not-filled" : ""
+            } password-input`}
+            type={showPassword ? "text" : "password"}
             name="password"
             placeholder="Password *"
+            pattern="^(?=.*\d)(?=.*[@$!%*?&#])[a-z\d@$!%*?&#]{8,}$"
+            title="Password must be at least 8 characters,include a number, and a special character"
             value={registerDetail.password}
             onChange={(e) => setFormValues(e)}
           />
+          <span className="password-toggle" onClick={handleShowPassword}>
+            👁
+          </span>
         </div>
 
         <div className="form-group">
@@ -182,9 +175,7 @@ const Register = () => {
             name="dob"
             placeholder="Date of Birth"
             value={registerDetail.dob}
-            onChange={(e) =>
-              setRegisterDetail((prev) => ({ ...prev, dob: e.target.value }))
-            }
+            onChange={(e) => setFormValues(e)}
           />
         </div>
 

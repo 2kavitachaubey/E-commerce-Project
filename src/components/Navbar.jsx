@@ -2,9 +2,12 @@ import React from "react";
 import Link from "next/link";
 import "../pages.css";
 import { useCart } from "@/lib/cartContext";
+import { useInfo } from "@/lib/formContext";
 
 const Navbar = () => {
   // console.log('props navbar', props.cart)
+  const { registerDetail, isAuthenticated } = useInfo();
+  console.log(registerDetail.firstname)
   const { cart } = useCart();
   const cartLength = cart.reduce((acc, item) => acc + item.quantity, 0);
   return (
@@ -43,9 +46,18 @@ const Navbar = () => {
         <Link href="/Eligibility">
           <button className="yellow-btn">Check Eligibility</button>
         </Link>
-        <Link href="/logInPage">
-          <button className="yellow-btn">Log In</button>
-        </Link>
+        {isAuthenticated ? (
+          <Link href="/loggedInPage">
+            <button className="yellow-btn">
+              {console.log(registerDetail.firstname)}
+              hello, {registerDetail.firstname}
+            </button>
+          </Link>
+        ) : (
+          <Link href="/logInPage">
+            <button className="yellow-btn">Log In</button>
+          </Link>
+        )}
       </div>
     </nav>
   );
