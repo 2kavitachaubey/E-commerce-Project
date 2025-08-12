@@ -50,7 +50,7 @@ const Navbar = () => {
           <Link href="/loggedInPage">
             <button className="yellow-btn">
               {console.log(registerDetail.firstname)}
-              hello, {registerDetail.firstname}
+              Hello, {registerDetail.firstname}
             </button>
           </Link>
         ) : (
