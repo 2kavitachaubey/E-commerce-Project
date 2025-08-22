@@ -51,13 +51,8 @@ const Register = () => {
       setFillValue(true);
       return;
     }
-    localStorage.setItem("userDetails", JSON.stringify(registerDetail));
+    sessionStorage.setItem("userDetails", JSON.stringify(registerDetail));
     console.log(registerDetail);
-    // setIsAuthenticated(true);
-    // setSelectedCountry("");
-    // setSelectedState("");
-    // setCities([]);
-    // setStates([]);
     setFillValue(false);
   };
 

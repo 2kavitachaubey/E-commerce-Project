@@ -20,6 +20,7 @@ export const FormProvider = ({ children }) => {
     state: "",
     city: "",
     address: "",
+    gender: "",
   });
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   useEffect(() => {
