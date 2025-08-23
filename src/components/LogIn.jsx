@@ -6,6 +6,7 @@ const LogIn = () => {
   return (
     <div>
       <h1>Log In</h1>
+      
       <Link href="/registerForm">
         <button className="square-btn">Register</button>
       </Link>
