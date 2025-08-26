@@ -24,7 +24,7 @@ export const FormProvider = ({ children }) => {
   });
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   useEffect(() => {
-    const storedData = localStorage.getItem("userDetails");
+    const storedData = sessionStorage.getItem("userDetails");
     if (storedData) {
       const parsedData = JSON.parse(storedData); // Fixed: parse the actual data, not the string "userDetails"
       setRegisterDetail(parsedData);

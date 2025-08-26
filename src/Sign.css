@@ -124,3 +124,82 @@
     color: #ff4c05;
     border-color: #ffa705;
 }
+
+
+/* Log In Style */
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 500px;
+  padding: 70px 50px;
+  margin: 100px auto; /* centers horizontally */
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.279);
+  background: #fff;
+}
+
+.login-title {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 40px;
+  color: #254b45;
+  text-align: center;
+}
+
+.login-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.login-input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.login-input:focus {
+  border-color: #254b45;
+}
+
+.login-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+  width: 100%;
+}
+
+.login-btn,
+.register-btn {
+  flex: 1;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.login-btn {
+  background: #254b45;
+  color: #fff;
+  margin-right: 10px;
+}
+
+.login-btn:hover {
+  background: #1e3a35;
+}
+
+.register-btn {
+  background: #f1f1f1;
+  color: #254b45;
+}
+
+.register-btn:hover {
+  background: #e0e0e0;
+}

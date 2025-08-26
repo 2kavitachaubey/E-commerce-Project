@@ -17,7 +17,7 @@ const Register = () => {
   const [showPassword, setShowPassword] = useState(false);
 
   useEffect(() => {
-    const savedData = localStorage.getItem("userDetails");
+    const savedData = sessionStorage.getItem("userDetails");
     if (savedData) {
       console.log("Previously saved data:", JSON.parse(savedData));
     }
