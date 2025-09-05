@@ -127,16 +127,24 @@
 
 
 /* Log In Style */
+.login-page{
+  background: lightblue url("../public/images/Gemini_Generated_Image_dgzmw2dgzmw2dgzm\ \(2\).png") no-repeat fixed center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .login-container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   max-width: 500px;
   padding: 70px 50px;
-  margin: 100px auto; /* centers horizontally */
+  margin: 120px 0;
   border-radius: 20px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.279);
-  background: #fff;
+  background-color: #ffffffe8;
 }
 
 .login-title {
@@ -174,14 +182,14 @@
   margin-top: 50px;
   width: 100%;
 }
-
-.login-btn,
-.register-btn {
-  flex: 1;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 10px;
+.login-btn,.register-btn{
+  background-color: #254b45;
+  color: #ffffff;
+  padding: 12px 65px;
   font-size: 16px;
+  font-weight: 600;
+  border-radius: 10px;
+  border: none;
   cursor: pointer;
 }
 
@@ -190,16 +198,8 @@
   color: #fff;
   margin-right: 10px;
 }
-
-.login-btn:hover {
-  background: #1e3a35;
-}
-
-.register-btn {
-  background: #f1f1f1;
+.login-btn:hover, .register-btn:hover{
+  background-color: #ffa705;
   color: #254b45;
 }
 
-.register-btn:hover {
-  background: #e0e0e0;
-}
