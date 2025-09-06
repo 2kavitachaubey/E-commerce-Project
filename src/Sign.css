@@ -74,7 +74,6 @@
   color: #254b45; /* match your theme on hover */
 }
 
-
 /* Gender radio */
 .gender-group {
   display: flex;
@@ -120,15 +119,16 @@
   background-color: #ffb93a;
 }
 
-.form-input.not-filled::placeholder{
-    color: #ff4c05;
-    border-color: #ffa705;
+.form-input.not-filled::placeholder {
+  color: #ff4c05;
+  border-color: #ffa705;
 }
 
-
 /* Log In Style */
-.login-page{
-  background: lightblue url("../public/images/Gemini_Generated_Image_dgzmw2dgzmw2dgzm\ \(2\).png") no-repeat fixed center;
+.login-page {
+  background: lightblue
+    url("../public/images/Gemini_Generated_Image_dgzmw2dgzmw2dgzm\ \(2\).png")
+    no-repeat fixed center;
   background-size: cover;
   display: flex;
   align-items: center;
@@ -182,7 +182,8 @@
   margin-top: 50px;
   width: 100%;
 }
-.login-btn,.register-btn{
+.login-btn,
+.register-btn {
   background-color: #254b45;
   color: #ffffff;
   padding: 12px 65px;
@@ -198,8 +199,8 @@
   color: #fff;
   margin-right: 10px;
 }
-.login-btn:hover, .register-btn:hover{
+.login-btn:hover,
+.register-btn:hover {
   background-color: #ffa705;
   color: #254b45;
 }
-

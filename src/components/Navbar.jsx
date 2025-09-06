@@ -7,7 +7,7 @@ import { useInfo } from "@/lib/formContext";
 const Navbar = () => {
   // console.log('props navbar', props.cart)
   const { registerDetail, isAuthenticated } = useInfo();
-  console.log(registerDetail.firstname)
+  console.log(registerDetail.firstname);
   const { cart } = useCart();
   const cartLength = cart.reduce((acc, item) => acc + item.quantity, 0);
   return (
@@ -23,7 +23,7 @@ const Navbar = () => {
           <Link href="/AboutUs">About Us</Link>
         </li>
         <li className="link-item">
-          <Link href="/Articles">Articles</Link>
+          <Link href="/articles">Articles</Link>
         </li>
         <li className="link-item">
           <Link href="/Faqs">Faq's</Link>

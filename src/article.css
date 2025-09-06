@@ -1,0 +1,51 @@
+.article-hero-section {
+  background: #dae7d8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 20px;
+  border-radius: 20px;
+  min-height: 50vh;
+}
+.blogs-section {
+  margin: 80px;
+}
+.blog-container {
+  margin: 0 15px; 
+  box-sizing: border-box;
+  min-height: 350px;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+.blog-container img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.blog-container p {
+  font-size: 14px;
+  color: #6b7280;
+  margin: 10px 0;
+}
+
+.blog-container h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 10px 0;
+}
+
+.blog-container button {
+  border: none;
+  background: none;
+  margin-top: 10px;
+  color: #254b45;
+  cursor: pointer;
+}
