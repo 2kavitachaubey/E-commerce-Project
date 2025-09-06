@@ -1,3 +1,9 @@
+.register-section{
+  background: url("../public/images/registerBackground.png") no-repeat fixed center;
+  background-size: cover;
+  margin: 0;
+  padding: 20px 0;
+}
 .register-container {
   max-width: 500px;
   margin: 40px auto;
@@ -7,7 +13,6 @@
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Heading */
 .form-title {
   text-align: center;
   font-size: 2rem;
@@ -16,21 +21,18 @@
   color: #254b45;
 }
 
-/* Form Layout */
 .register-form {
   display: flex;
   flex-direction: column;
   gap: 15px;
 }
 
-/* Groups */
 .form-group {
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
 
-/* Input, Select, Textarea */
 .form-input,
 .form-select,
 .form-textarea {
@@ -56,7 +58,7 @@
 }
 
 .password-input {
-  padding-right: 40px; /* space for the icon */
+  padding-right: 40px; 
 }
 
 .password-toggle {
@@ -71,10 +73,9 @@
 }
 
 .password-toggle:hover {
-  color: #254b45; /* match your theme on hover */
+  color: #254b45; 
 }
 
-/* Gender radio */
 .gender-group {
   display: flex;
   gap: 15px;
@@ -87,22 +88,19 @@
   cursor: pointer;
 }
 
-/* Country, State, City in one line */
 .location-group {
   display: flex;
   gap: 10px;
 }
 
 .location-group .form-select {
-  flex: 1; /* Equal width for all dropdowns */
+  flex: 1; 
 }
 
-/* Remove textarea resize corner */
 .form-textarea {
   resize: none;
 }
 
-/* Submit button */
 .submit-button {
   padding: 12px;
   font-size: 1rem;
@@ -127,7 +125,7 @@
 /* Log In Style */
 .login-page {
   background: lightblue
-    url("../public/images/Gemini_Generated_Image_dgzmw2dgzmw2dgzm\ \(2\).png")
+    url("../public/images/logInBackground.png")
     no-repeat fixed center;
   background-size: cover;
   display: flex;
