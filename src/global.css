@@ -1,10 +1,13 @@
-.header-howitworks {
+.header-howitworks{
   background: #fff4f1;
+  border-radius: 20px;
 }
-.header-howitworks .wellbeing-content {
+
+.wellbeing-content {
   margin-left: 30px;
 }
-.header-howitworks .wellbeing-img {
+
+.wellbeing-img{
   margin-right: 30px;
 }
 
