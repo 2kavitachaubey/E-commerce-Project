@@ -87,10 +87,12 @@ const Footer = () => {
     <div className="footer-container">
       <div className="footer-content">
         <div className="footer-social-link">
-          <Link href="/"><img src="/images/footerLogo.svg" alt="logo" /></Link>
+          <Link href="/">
+            <img src="/images/footerLogo.svg" alt="logo" />
+          </Link>
           <div className="social-icon">
             {socialLogo.map((value, index) => (
-              <a href={value.link} key={index} >
+              <a href={value.link} key={index}>
                 <img src={value.logo} alt={value.title} />
               </a>
             ))}
@@ -99,23 +101,34 @@ const Footer = () => {
         <div className="footer-page-link">
           {pagesLink.map((section, index) => (
             <div className="footer-section" key={index}>
-              <h2>{section.title}</h2>
-              <ul>
-                {section.items.map((item, idx) => (
-                  <li key={idx}>
-                    {item.type === "link" ? (
-                      <Link href={item.link}>{item.linkTitle}</Link>
-                    ) : (
-                      <div>
-                        <a href={item.link}>
-                          <img src={item.logo} alt="contact" />
-                          <p>{item.contact}</p>
-                        </a>
-                      </div>
-                    )}
-                  </li>
-                ))}
-              </ul>
+              <div
+                className={`footer-section ${
+                  section.title === "Links" || section.title === "Useful Links"
+                    ? "hide-on-mobile"
+                    : ""
+                }`}
+                key={index}
+              >
+                <h2>{section.title}</h2>
+                <ul>
+                  {section.items.map((item, idx) => (
+                    <li key={idx}>
+                      {item.type === "link" ? (
+                        <Link href={item.link}>
+                          {item.linkTitle}
+                        </Link>
+                      ) : (
+                        <div>
+                          <a href={item.link}>
+                            <img src={item.logo} alt="contact" />
+                            <p>{item.contact}</p>
+                          </a>
+                        </div>
+                      )}
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           ))}
         </div>
