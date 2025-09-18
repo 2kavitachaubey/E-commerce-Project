@@ -51,11 +51,14 @@ nav {
 .nav-btn {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  gap: 15px;
 }
 
 .addToCart-btn {
   position: relative;
-  margin-right: 20px;
+  top: 5px;
+  margin-right: 5px;
   border-radius: 12px;
   background-color: transparent;
   border: none;
@@ -140,7 +143,7 @@ nav {
 .heroImage {
   flex: 1;
   display: flex;
-  justify-content: center; 
+  justify-content: center;
   align-items: center;
 }
 
@@ -156,23 +159,38 @@ nav {
 .feature-detail-row {
   background-color: #254b45;
   color: white;
-  padding: 16px 60px;
+  padding: 16px 0;
   border-radius: 15px;
+  overflow: hidden;
+  user-select: none;
+}
+
+.marquee-content {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-evenly;
+  gap: 40px;
+  animation: scroll 10s linear infinite;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-65%);
+  }
 }
 
 .feature-detail-box {
   display: flex;
   font-size: 16px;
   align-items: center;
+  white-space: nowrap;
 }
 .feature-detail-box img {
-  padding-right: 8px;
+  margin-right: 8px;
 }
-
-
 
 /* Steps Styling ..........*/
 .steps-details {
@@ -606,4 +624,287 @@ nav {
   align-items: center;
   gap: 8px;
   font-size: 13px;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+.show-button {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  nav {
+    margin: 20px;
+  }
+
+  nav .main-logo {
+    line-height: 0;
+  }
+  nav .main-logo img {
+    max-width: 150px;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 16px;
+    position: absolute;
+    top: 50px;
+    right: 0px;
+    gap: 10px;
+    background-color: #ffffff;
+    padding: 40px 20px;
+    flex-wrap: wrap;
+    border-radius: 0 0 0 15px;
+  }
+  .show li {
+    border-bottom: 1px solid #254b451e;
+  }
+  .show {
+    display: flex;
+  }
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-btn {
+    display: none;
+  }
+
+  .show-button {
+    display: flex;
+  }
+
+  .hero-section {
+    padding: 0 60px;
+  }
+
+  .hero-content {
+    padding: 80px 0;
+  }
+
+  .heroImage {
+    display: none;
+  }
+
+  /*steps  */
+  .steps-details {
+    margin: 30px 20px;
+  }
+
+  .three-steps {
+    gap: 10px;
+  }
+
+  .img-index {
+    top: 8px;
+    left: 10px;
+    height: 28px;
+    width: 30px;
+    font-size: 14px;
+  }
+
+  .img-wrapper img {
+    margin-bottom: 5px;
+  }
+
+  .single-step h3 {
+    font-size: 1.2rem;
+    line-height: 28px;
+    margin-bottom: 2px;
+  }
+
+  .single-step p {
+    line-height: 28px;
+  }
+
+  .step-clearity {
+    margin-top: 20px;
+  }
+
+  .step-clearity p {
+    font-size: 1rem;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+  }
+
+  /* pricing */
+  .pricingDetails {
+    padding: 60px 20px;
+  }
+
+  .section-heading {
+    margin-bottom: 20px;
+  }
+
+  .section-para p {
+    margin-bottom: 30px;
+  }
+
+  .box-active,
+  .box-notActive {
+    flex-direction: column;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+
+  .price-feature {
+    display: none;
+  }
+
+  .price-title h3 {
+    margin-bottom: 5px;
+  }
+
+  .price-title p {
+    line-height: 28px;
+    margin-bottom: 15px;
+  }
+
+  .price-label h5 {
+    margin-bottom: 0;
+  }
+
+  .price-label h1 {
+    font-size: 40px;
+    margin-bottom: 0px;
+  }
+
+  /* wellbeing-section */
+  .wellbeing-section {
+    text-align: center;
+    padding: 80px;
+  }
+
+  .wellbeing-content {
+    padding-right: 0;
+  }
+
+  .wb-customer {
+    justify-content: center;
+  }
+
+  .wellbeing-img {
+    display: none;
+  }
+}
+
+@media (max-width: 420px) {
+  .yellow-btn {
+    padding: 14px;
+  }
+  .white-box {
+    padding: 14px;
+  }
+
+  nav .main-logo img {
+    width: 120px;
+  }
+
+  .nav-links {
+    font-size: 14px;
+  }
+
+  .hero-section {
+    padding: 0 25px;
+  }
+  .hero-content {
+    padding: 50px 10px;
+    text-align: center;
+  }
+  .hero-content p {
+    font-size: 14px;
+    text-align: justify;
+  }
+  .hero-content h1 {
+    font-size: 24px;
+  }
+  .feature-item img {
+    width: 30px;
+  }
+
+  .feature-detail-row {
+    padding: 10px 0;
+  }
+
+  .feature-detail-box {
+    font-size: 14px;
+  }
+  .feature-detail-box img {
+    height: 20px;
+  }
+
+  /* steps  */
+  .steps-details {
+    margin: 10px 5px;
+  }
+  .section-heading {
+    font-size: 24px;
+  }
+
+  .three-steps {
+    display: flex;
+    flex-direction: column;
+  }
+  .single-step h3 {
+    font-size: 1rem;
+  }
+
+  .single-step p {
+    font-size: 14px;
+    line-height: 25px;
+  }
+
+  .step-clearity p {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  /* pricing */
+  .pricingDetails {
+    padding: 40px 20px;
+  }
+
+  .pricingDetails .section-heading {
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .section-para p {
+    font-size: 14px;
+  }
+
+  .box-active,
+  .box-notActive {
+    width: 300px;
+    margin-bottom: 10px;
+  }
+
+  .price-title h3 {
+    font-size: 20px;
+    margin-bottom: 0;
+  }
+
+  .price-title p {
+    padding: 0 15px;
+    line-height: 20px;
+    font-size: 14px;
+  }
+
+  .price-label h1 {
+    font-size: 32px;
+  }
+
+  /* wellbeing-section */
+  .wellbeing-section {
+    padding: 60px 40px;
+  }
+  .wellbeing-content p{
+    text-align: justify;
+    line-height: 28px;
+  }
 }

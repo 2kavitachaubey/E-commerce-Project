@@ -4,7 +4,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 0 20px;
+  margin: 0 20px 40px 20px;
   border-radius: 20px;
   min-height: 50vh;
 }
@@ -13,13 +13,13 @@
   max-width: 1450px;
   width: 100%;
   padding: 60px;
-  margin: 40px auto;
+  margin: 0px auto 60px auto;
 }
 .slick-slide {
   padding: 0 10px;
 }
 .blog-container {
-  padding: 15px;     
+  padding:15px;     
   box-sizing: border-box;
   min-height: 350px;
   border: 1px solid #e5e7eb;
@@ -74,4 +74,58 @@
 .slick-prev:hover:before,
 .slick-next:hover:before{
   color: #254b45c9 !important;  
+}
+
+
+/* detail page */
+.blog-detail-page{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #DAE7D8;
+  min-height: 600px;
+  text-align: center;
+  border-radius: 20px;
+  margin: 20px;
+}
+.blog-detail-heading{
+  padding: 90px 0;
+}
+.blog-detail-heading h1{
+  font-size: 60px;
+}
+
+.blog-detail-img{
+  position: absolute;
+  top: 320px;
+  width: 860px;
+  height: 540px;
+}
+.blog-detail-img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.about-blog{
+  margin-top: 300px;
+  margin-bottom: 60px;
+}
+.about-blog p {  
+  line-height: 1.6;        /* spacing */
+  font-size: 1rem;
+  color: #333;
+  text-align: justify;      /* ✅ centers the text */
+  max-width: 600px;        /* optional: keeps text from being too wide */
+  margin: 0 auto;          /* ✅ centers the block itself */
+}
+.recent-blog{
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.recent-blog .recent-blog-article{
+  margin-top: -10px;
 }

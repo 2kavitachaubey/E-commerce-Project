@@ -4,7 +4,7 @@ import Link from "next/link";
 const Hero = () => {
   return (
     <div className="hero-details">
-    {/* Hero section */}
+      {/* Hero section */}
       <div className="hero-section">
         <div className="hero-content">
           <p className="white-box content">Plant Based Medicine</p>
@@ -37,28 +37,52 @@ const Hero = () => {
           <img src="/images/Yello.png" alt="HeroImage" />
         </div>
       </div>
- 
-    {/* Feature-Details */}
+
+      {/* Feature-Details */}
       <div className="feature-detail-row">
-        <div className="feature-detail-box">
-          <img src="/images/feature1.svg" alt="consultsImage" />
-          <p>One-On-One Consults</p>
-        </div>
-        <div className="feature-detail-box">
-          <img src="/images/feature2.png" alt="guidanceImage" />
-          <p>Guidance From Professional</p>
-        </div>
-        <div className="feature-detail-box">
-          <img src="/images/feature3.png" alt="supportImage" />
-          <p>Ongoing Support</p>
-        </div>
-        <div className="feature-detail-box">
-          <img src="/images/feature4.png" alt="comprehensiveImage" />
-          <p>Comprehensive Approach</p>
-        </div>
-        <div className="feature-detail-box">
-          <img src="/images/feature5.png" alt="professionalImage" />
-          <p>Professional Health Guidance</p>
+        <div className="marquee-content">
+          <div className="feature-detail-box">
+            <img src="/images/feature1.svg" alt="consultsImage" />
+            <p>One-On-One Consults</p>
+          </div>
+          <div className="feature-detail-box">
+            <img src="/images/feature2.png" alt="guidanceImage" />
+            <p>Guidance From Professional</p>
+          </div>
+          <div className="feature-detail-box">
+            <img src="/images/feature3.png" alt="supportImage" />
+            <p>Ongoing Support</p>
+          </div>
+          <div className="feature-detail-box">
+            <img src="/images/feature4.png" alt="comprehensiveImage" />
+            <p>Comprehensive Approach</p>
+          </div>
+          <div className="feature-detail-box">
+            <img src="/images/feature5.png" alt="professionalImage" />
+            <p>Professional Health Guidance</p>
+          </div>
+
+          {/* duplicate for scroll */}
+          <div className="feature-detail-box">
+            <img src="/images/feature1.svg" alt="consultsImage" />
+            <p>One-On-One Consults</p>
+          </div>
+          <div className="feature-detail-box">
+            <img src="/images/feature2.png" alt="guidanceImage" />
+            <p>Guidance From Professional</p>
+          </div>
+          <div className="feature-detail-box">
+            <img src="/images/feature3.png" alt="supportImage" />
+            <p>Ongoing Support</p>
+          </div>
+          <div className="feature-detail-box">
+            <img src="/images/feature4.png" alt="comprehensiveImage" />
+            <p>Comprehensive Approach</p>
+          </div>
+          <div className="feature-detail-box">
+            <img src="/images/feature5.png" alt="professionalImage" />
+            <p>Professional Health Guidance</p>
+          </div>
         </div>
       </div>
     </div>

@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import { FaBars, FaTimes } from "react-icons/fa";
 import Link from "next/link";
 import "../pages.css";
 import { useCart } from "@/lib/cartContext";
@@ -9,13 +10,16 @@ const Navbar = () => {
   const { registerDetail, isAuthenticated } = useInfo();
   console.log(registerDetail.firstname);
   const { cart } = useCart();
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [viewbutton, setviewButton] = useState(false);
+
   const cartLength = cart.reduce((acc, item) => acc + item.quantity, 0);
   return (
     <nav>
-      <Link href="/">
+      <Link href="/" className="main-logo">
         <img src="/images/logo.png" alt="logo of the website" />
       </Link>
-      <ul className="nav-links">
+      <ul className={`nav-links ${menuOpen ? "show" : ""}`}>
         <li className="link-item">
           <Link href="/howItWorks">How It Works</Link>
         </li>
@@ -31,7 +35,28 @@ const Navbar = () => {
         <li className="link-item">
           <Link href="/products">Product</Link>
         </li>
+        <li className="link-item show-button">
+          <Link href="/cartPage">Cart</Link>
+        </li>
+        <li>
+          <Link href="/Eligibility" className="link-item show-button">
+            Check Eligibility
+          </Link>
+        </li>
+        <li>
+          {isAuthenticated ? (
+            <Link href="/loggedInPage" className="link-item show-button">
+              {console.log(registerDetail.firstname)}
+              Hello, {registerDetail.firstname}
+            </Link>
+          ) : (
+            <Link href="/logInPage" className="link-item show-button">
+              Log In
+            </Link>
+          )}
+        </li>
       </ul>
+
       <div className="nav-btn">
         <Link href="/cartPage">
           <div>
@@ -46,18 +71,30 @@ const Navbar = () => {
         <Link href="/Eligibility">
           <button className="yellow-btn">Check Eligibility</button>
         </Link>
-        {isAuthenticated ? (
-          <Link href="/loggedInPage">
-            <button className="yellow-btn">
-              {console.log(registerDetail.firstname)}
-              Hello, {registerDetail.firstname}
-            </button>
-          </Link>
-        ) : (
-          <Link href="/logInPage">
-            <button className="yellow-btn">Log In</button>
-          </Link>
-        )}
+        <div>
+          {isAuthenticated ? (
+            <Link href="/loggedInPage">
+              <button className="yellow-btn">
+                {console.log(registerDetail.firstname)}
+                Hello, {registerDetail.firstname}
+              </button>
+            </Link>
+          ) : (
+            <Link href="/logInPage">
+              <button className="yellow-btn">Log In</button>
+            </Link>
+          )}
+        </div>
+      </div>
+
+      <div
+        className="hamburger"
+        onClick={() => {
+          setMenuOpen(!menuOpen);
+          setviewButton(!viewbutton);
+        }}
+      >
+        {menuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
       </div>
     </nav>
   );
